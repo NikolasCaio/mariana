@@ -5,81 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Para Mariana 💖</title>
   <style>
-    /* ---- estilo geral ---- */
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-    body, html {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: "Poppins", sans-serif;
+      background: #ffe6ef;
       color: #333;
-      background: #ffe6ef; /* rosa clarinho */
       overflow-x: hidden;
       scroll-behavior: smooth;
     }
 
     section {
-      position: relative;
       width: 100%;
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+      padding: 50px 20px;
       text-align: center;
-      padding: 50px;
-      box-sizing: border-box;
-      flex-direction: column;
+      position: relative;
     }
 
-    /* ---- texto principal ---- */
     .texto {
       max-width: 800px;
       background: rgba(255, 255, 255, 0.7);
       border-radius: 20px;
       padding: 40px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(8px);
     }
 
     h1 {
-      font-size: 3em;
+      font-size: 2.8em;
       margin-bottom: 20px;
       color: #d63384;
     }
 
     p {
-      font-size: 1.2em;
+      font-size: 1.1em;
       line-height: 1.8em;
       color: #444;
       text-align: justify;
+      margin-bottom: 1.5em;
     }
 
-    /* ---- parallax ---- */
+    /* ---- seções com parallax ---- */
     .parallax {
       position: relative;
       width: 100%;
       height: 100vh;
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
       font-size: 4em;
       font-weight: 600;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      color: white;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     }
 
-    /* ---- imagens ---- */
-    .foto1 {
-      background-image: url('./fotos/foto\ 4.jpg');
-    }
-    .foto2 {
-      background-image: url('./fotos/foto\ 3.jpg');
-    }
-    .foto3 {
-      background-image: url('./fotos/foto\ 2.jpg');
+    .parallax img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 130%;
+      object-fit: cover;
+      z-index: -1;
+      transform: translateY(0);
+      transition: transform 0.1s linear;
     }
 
     footer {
@@ -90,23 +91,12 @@
       color: #777;
     }
 
-    /* ---- responsividade ---- */
     @media (max-width: 768px) {
       h1 {
         font-size: 2em;
       }
-
-      .texto {
-        padding: 25px;
-      }
-
       .parallax {
-        font-size: 2.5em;
-        background-attachment: scroll; /* melhora desempenho no celular */
-      }
-
-      p {
-        font-size: 1em;
+        font-size: 2.2em;
       }
     }
   </style>
@@ -116,37 +106,75 @@
   <section>
     <div class="texto">
       <h1>Para Mariana 💖</h1>
-      <p>Mariana, hoje é o dia de alguém que tem se tornado cada vez mais importante pra mim.  
-      De uns tempos pra cá, Deus tem me mostrado o quanto foi especial o jeito que Ele te colocou na minha vida.</p>
+      <p>
+        Mariana, hoje é o dia de alguém que tem se tornado cada vez mais importante pra mim.
+        De uns tempos pra cá, Deus tem me mostrado o quanto foi especial o jeito que Ele te colocou na minha vida.
+      </p>
 
-      <p>O que começou como uma simples amizade de escola q os dois tinha uma relaçao de muito ódio e imaturidade kskskks, virou algo que nem eu esperava. mesmo q a gente ainda não namore.  
-      Aos poucos, fui te conhecendo de verdade e descobrindo uma menina incrível, linda, inteligente, engraçada, carinhosa, paciente e com um coração cheio de Deus.</p>
+      <p>
+        O que começou como uma simples amizade de escola q os dois tinha uma relaçao de muito ódio e imaturidade kskskks, virou algo que nem eu esperava. mesmo q a gente ainda não namore.
+        Aos poucos, fui te conhecendo de verdade e descobrindo uma menina incrível, linda, inteligente, engraçada, carinhosa, paciente e com um coração cheio de Deus.
+      </p>
 
-      <p>Amo o jeito que você se preocupa, o jeito que fala de Cristo e como o seu olhar transmite paz.  
-      Você me inspira a ser uma pessoa melhor — não só pra mim, mas principalmente pra Deus.</p>
+      <p>
+        Amo o jeito que você se preocupa, o jeito que fala de Cristo e como o seu olhar transmite paz.
+        Você me inspira a ser uma pessoa melhor — não só pra mim, mas principalmente pra Deus.
+      </p>
 
-      <p>Sou grato por cada conversa, cada risada e cada momento ao seu lado.  
-      Vejo em você alguém que tem um futuro lindo pela frente (de preferencia ao meu lado), alguém que vai ser usada por Deus de maneiras que nem imagina. Oro pra que Ele continue te guiando, fortalecendo e te abençoando em cada passo.</p>
+      <p>
+        Sou grato por cada conversa, cada risada e cada momento ao seu lado.
+        Vejo em você alguém que tem um futuro lindo pela frente (de preferencia ao meu lado), alguém que vai ser usada por Deus de maneiras que nem imagina. Oro pra que Ele continue te guiando, fortalecendo e te abençoando em cada passo.
+      </p>
 
-      <p>E se for da vontade de Deus que a gente continue crescendo juntos, que Ele amadureça o nosso amor, molde nossos corações e nos ensine a amar do jeito certo — com paciência, respeito, maturidade e propósito.</p>
+      <p>
+        E se for da vontade de Deus que a gente continue crescendo juntos, que Ele amadureça o nosso amor, molde nossos corações e nos ensine a amar do jeito certo — com paciência, respeito, maturidade e propósito.
+      </p>
 
-      <p>Você é uma das maiores bênçãos que já recebi.  
-      Que o Senhor continue abençoando vc e sua familia, te guarde e te mantenha firme nos caminhos dEle.  
-      E independente de tudo, quero que saiba: sempre vou torcer pra ver você feliz, seguindo o que Deus tem preparado pra sua vida.</p>
+      <p>
+        Você é uma das maiores bênçãos que já recebi.
+        Que o Senhor continue abençoando vc e sua familia, te guarde e te mantenha firme nos caminhos dEle.
+        E independente de tudo, quero que saiba: sempre vou torcer pra ver você feliz, seguindo o que Deus tem preparado pra sua vida.
+      </p>
 
-      <p>Mariana, eu te amo.  
-      Obrigado por ser quem você é — um exemplo de fé e um presente de Deus pra mim. 💖</p>
+      <p>
+        Mariana, eu te amo.
+        Obrigado por ser quem você é — um exemplo de fé e um presente de Deus pra mim. 💖
+      </p>
     </div>
   </section>
 
-  <section class="parallax foto1">Eu</section>
-  <section class="parallax foto2">Te</section>
-  <section class="parallax foto3">Amo!</section>
+  <section class="parallax">
+    <img src="./fotos/foto 4.jpg" alt="foto 1">
+    Eu
+  </section>
+
+  <section class="parallax">
+    <img src="./fotos/foto 3.jpg" alt="foto 2">
+    Te
+  </section>
+
+  <section class="parallax">
+    <img src="./fotos/foto 2.jpg" alt="foto 3">
+    Amo!
+  </section>
 
   <footer>
     Feito com 💗 por Nikolas para Mariana
   </footer>
 
+  <script>
+    // Efeito parallax que funciona em celular e PC
+    const parallaxSections = document.querySelectorAll(".parallax img");
+
+    window.addEventListener("scroll", () => {
+      parallaxSections.forEach(img => {
+        const rect = img.parentElement.getBoundingClientRect();
+        const scrollTop = window.scrollY || window.pageYOffset;
+        const speed = 0.3;
+        const offset = (scrollTop - img.parentElement.offsetTop) * speed;
+        img.style.transform = `translateY(${offset}px)`;
+      });
+    });
+  </script>
 </body>
 </html>
-
