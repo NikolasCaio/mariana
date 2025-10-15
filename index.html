@@ -76,11 +76,24 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 130%;
+      height: 100%;
       object-fit: cover;
       z-index: -1;
       transform: translateY(0);
       transition: transform 0.1s linear;
+    }
+
+    /* ---- ajustes de enquadramento individuais ---- */
+    .parallax:nth-of-type(2) img {
+      object-position: top center;   /* foto 4.jpg - vertical */
+    }
+
+    .parallax:nth-of-type(3) img {
+      object-position: center center; /* foto 3.jpg - horizontal */
+    }
+
+    .parallax:nth-of-type(4) img {
+      object-position: bottom center; /* foto 2.jpg - horizontal */
     }
 
     footer {
@@ -141,8 +154,9 @@
         Obrigado por ser quem você é — um exemplo de fé e um presente de Deus pra mim. 💖
       </p>
     </div>
-    
-    <section class="parallax">
+  </section>
+
+  <section class="parallax">
     <img src="foto 4.jpg" alt="foto 1">
     Eu
   </section>
@@ -157,13 +171,12 @@
     Amo!
   </section>
 
-
   <footer>
     Feito com 💗 por Nikolas para Mariana
   </footer>
 
   <script>
-    // Efeito parallax que funciona em celular e PC
+    // Efeito parallax suave (funciona no PC e celular)
     const parallaxSections = document.querySelectorAll(".parallax img");
 
     window.addEventListener("scroll", () => {
@@ -178,4 +191,3 @@
   </script>
 </body>
 </html>
-
