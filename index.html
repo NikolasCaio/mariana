@@ -1,105 +1,193 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eu Te Amo 💖</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Mariana 💖</title>
   <style>
-    /* Fundo rosa suave */
-    body {
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    * {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #ffd6ec;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #ffe6ef;
       color: #333;
-      text-align: center;
       overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    section {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .texto {
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(8px);
     }
 
     h1 {
-      margin: 0;
-      padding: 50px 20px;
-      font-size: 2.5em;
+      font-size: 2.8em;
+      margin-bottom: 20px;
       color: #d63384;
     }
 
-    /* Seções com parallax */
+    p {
+      font-size: 1.1em;
+      line-height: 1.8em;
+      color: #444;
+      text-align: justify;
+      margin-bottom: 1.5em;
+    }
+
+    /* ---- seções com parallax ---- */
     .parallax {
+      position: relative;
+      width: 100%;
       height: 100vh;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 3em;
+      font-size: 4em;
+      font-weight: 600;
       color: white;
-      text-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
-      font-weight: bold;
-      transition: background-size 0.3s ease, background-position 0.3s ease;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     }
 
-    /* Textos sobre as fotos */
-    .parallax span {
-      background: rgba(0, 0, 0, 0.4);
-      padding: 20px 40px;
-      border-radius: 20px;
+    .parallax img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      transform: translateY(0);
+      transition: transform 0.1s linear;
     }
 
-    /* Foto 4 é vertical: ajuste especial no PC */
-    .foto4 {
-      background-image: url('foto 4.jpg');
-      background-size: contain;
-      background-color: #ffd6ec;
+    /* ---- ajustes de enquadramento individuais ---- */
+    .parallax:nth-of-type(2) img {
+      object-position: top center;   /* foto 4.jpg - vertical */
     }
 
-    /* Foto 3 e 2 são horizontais */
-    .foto3 {
-      background-image: url('foto 3.jpg');
+    .parallax:nth-of-type(3) img {
+      object-position: center center; /* foto 3.jpg - horizontal */
     }
 
-    .foto2 {
-      background-image: url('foto 2.jpg');
-    }
-
-    /* Ajuste para celular */
-    @media (max-width: 768px) {
-      .parallax {
-        background-attachment: scroll;
-        background-size: contain;
-        height: 80vh;
-      }
-      .parallax span {
-        font-size: 2em;
-        padding: 15px 25px;
-      }
+    .parallax:nth-of-type(4) img {
+      object-position: bottom center; /* foto 2.jpg - horizontal */
     }
 
     footer {
-      background-color: #ffb6d9;
+      background: #fff0f6;
+      text-align: center;
       padding: 30px;
-      font-size: 1.2em;
-      color: #fff;
+      font-size: 1em;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2em;
+      }
+      .parallax {
+        font-size: 2.2em;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h1>💗 Nosso cantinho 💗</h1>
+  <section>
+    <div class="texto">
+      <h1>Para Mariana 💖</h1>
+      <p>
+        Mariana, hoje é o dia de alguém que tem se tornado cada vez mais importante pra mim.
+        De uns tempos pra cá, Deus tem me mostrado o quanto foi especial o jeito que Ele te colocou na minha vida.
+      </p>
 
-  <div class="parallax foto4">
-    <span>Eu</span>
-  </div>
+      <p>
+        O que começou como uma simples amizade de escola q os dois tinha uma relaçao de muito ódio e imaturidade kskskks, virou algo que nem eu esperava. mesmo q a gente ainda não namore.
+        Aos poucos, fui te conhecendo de verdade e descobrindo uma menina incrível, linda, inteligente, engraçada, carinhosa, paciente e com um coração cheio de Deus.
+      </p>
 
-  <div class="parallax foto3">
-    <span>Te</span>
-  </div>
+      <p>
+        Amo o jeito que você se preocupa, o jeito que fala de Cristo e como o seu olhar transmite paz.
+        Você me inspira a ser uma pessoa melhor — não só pra mim, mas principalmente pra Deus.
+      </p>
 
-  <div class="parallax foto2">
-    <span>Amo</span>
-  </div>
+      <p>
+        Sou grato por cada conversa, cada risada e cada momento ao seu lado.
+        Vejo em você alguém que tem um futuro lindo pela frente (de preferencia ao meu lado), alguém que vai ser usada por Deus de maneiras que nem imagina. Oro pra que Ele continue te guiando, fortalecendo e te abençoando em cada passo.
+      </p>
 
-  <footer>Feito com amor 💖 por Nikolas</footer>
+      <p>
+        E se for da vontade de Deus que a gente continue crescendo juntos, que Ele amadureça o nosso amor, molde nossos corações e nos ensine a amar do jeito certo — com paciência, respeito, maturidade e propósito.
+      </p>
 
+      <p>
+        Você é uma das maiores bênçãos que já recebi.
+        Que o Senhor continue abençoando vc e sua familia, te guarde e te mantenha firme nos caminhos dEle.
+        E independente de tudo, quero que saiba: sempre vou torcer pra ver você feliz, seguindo o que Deus tem preparado pra sua vida.
+      </p>
+
+      <p>
+        Mariana, eu te amo.
+        Obrigado por ser quem você é — um exemplo de fé e um presente de Deus pra mim. 💖
+      </p>
+    </div>
+  </section>
+
+  <section class="parallax">
+    <img src="foto 4.jpg" alt="foto 1">
+    Eu
+  </section>
+
+  <section class="parallax">
+    <img src="foto 3.jpg" alt="foto 2">
+    Te
+  </section>
+
+  <section class="parallax">
+    <img src="foto 2.jpg" alt="foto 3">
+    Amo!
+  </section>
+
+  <footer>
+    Feito com 💗 por Nikolas para Mariana
+  </footer>
+
+  <script>
+    // Efeito parallax suave (funciona no PC e celular)
+    const parallaxSections = document.querySelectorAll(".parallax img");
+
+    window.addEventListener("scroll", () => {
+      parallaxSections.forEach(img => {
+        const rect = img.parentElement.getBoundingClientRect();
+        const scrollTop = window.scrollY || window.pageYOffset;
+        const speed = 0.3;
+        const offset = (scrollTop - img.parentElement.offsetTop) * speed;
+        img.style.transform = `translateY(${offset}px)`;
+      });
+    });
+  </script>
 </body>
 </html>
