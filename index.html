@@ -12,6 +12,7 @@
       background-color: #ffd6ec;
       color: #333;
       text-align: center;
+      overflow-x: hidden;
     }
 
     h1 {
@@ -21,7 +22,7 @@
       color: #d63384;
     }
 
-    /* Parallax nas seções */
+    /* Seções com parallax */
     .parallax {
       height: 100vh;
       background-attachment: fixed;
@@ -35,6 +36,7 @@
       color: white;
       text-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
       font-weight: bold;
+      transition: background-size 0.3s ease, background-position 0.3s ease;
     }
 
     /* Textos sobre as fotos */
@@ -44,12 +46,28 @@
       border-radius: 20px;
     }
 
-    /* Ajuste para o celular */
+    /* Foto 4 é vertical: ajuste especial no PC */
+    .foto4 {
+      background-image: url('foto 4.jpg');
+      background-size: contain;
+      background-color: #ffd6ec;
+    }
+
+    /* Foto 3 e 2 são horizontais */
+    .foto3 {
+      background-image: url('foto 3.jpg');
+    }
+
+    .foto2 {
+      background-image: url('foto 2.jpg');
+    }
+
+    /* Ajuste para celular */
     @media (max-width: 768px) {
       .parallax {
         background-attachment: scroll;
-        background-size: contain; /* mostra a foto inteira */
-        height: 70vh;
+        background-size: contain;
+        height: 80vh;
       }
       .parallax span {
         font-size: 2em;
@@ -69,22 +87,19 @@
 
   <h1>💗 Nosso cantinho 💗</h1>
 
-  <div class="parallax" style="background-image: url('foto 1.jpg');">
+  <div class="parallax foto4">
     <span>Eu</span>
   </div>
 
-  <div class="parallax" style="background-image: url('foto 2.jpg');">
+  <div class="parallax foto3">
     <span>Te</span>
   </div>
 
-  <div class="parallax" style="background-image: url('foto 3.jpg');">
+  <div class="parallax foto2">
     <span>Amo</span>
   </div>
 
-  <div class="parallax" style="background-image: url('foto 4.jpg');">
-    <span>💞</span>
-  </div>
-
   <footer>Feito com amor 💖 por Nikolas</footer>
+
 </body>
 </html>
